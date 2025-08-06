@@ -55,17 +55,39 @@ location: "Semarang, Jawa Tengah"
   dates: dates-helper(end-date:"June 2025", start-date:"July 2024"),
   location: "Subang Jaya, Selangor",
 )
-- Doing total revamp of PPI Eunoia Wordpress website
-- Plan overall content & format direction of website
+- Plan and executing total revamp of PPI Eunoia Wordpress website
 - Publishing writtten and video content on the PPI Eunoia Website
 - Assisting in PPI Monash Event program, beyond web administration
 
 == Heading: Projects
 
-=== Multi-purpose Form  #sub[Node.js, PostgreSQL, TypeScript, HTML, Tailwind CSS]
+=== Patent Analyzer  #sub[Python, Django, OpenAI, TogetherAI, QdrantDB, Selenium]
 
-- Developing a full-stack application to gather data for PPI Eunoia, custom-built for the organization.
-- Creating front-end designs and reusable HTML templates.
-- Researching and implementing a suitable API for the problem case.
-- Developing back-end triggers integrated with front-end functionality.
-- Adding production-ready security features and deploying via VPS.
+- Research and Developing a decoder-based patent analyzer on TRIZ principles as a part of a Final Year Project
+- Develop and maintain proprietary text extraction module from PDF using Selenium and BS4
+- Develop and implement a novel CoT and prompt injection to do multi-label classification using a decoder model
+- Implement fact-grounded QA system using hybrid search RAG through QdrantDB
+- Implement a Django RESTful API and containerize in docker to ensure ease of deployment
+- Iterate and improve on backend bugs
+
+=== Expense Tracker #sub[Python, LLM, Agent, MCP, AWS, Telegram API, Matplotlib]
+
+- Plan and design a expense tracker and retriever powered by LLM model
+- Implement from scratch LLM agentic modules such as Agentic paradigms, Model proxy, Tooling, MCP servers, and usage loggings
+- Implement a upsert and retriever system through a natural language input into a Database through agentic tooling
+- Implement a retrieved output displayed through a tabular or graph form using matplotlib
+- Host backend app in AWS and connect it to a Telegram chatbot interfacr
+
+=== File Manipulation CLI tool #sub[Go, Bubbletea]
+- Plan development roadmap and tools I need
+- Implement an autocomplete UI from Bubbletea to autocomplete file-related CLI command such as cd, ls with folder name
+
+=== Big Data File Processing of IoT Data #sub[PySpark, Kafka, Zookeeper, MongoDB, Matplotlib]
+- Plan and compile data warehousing design for our project (variables, collection relationship, Upsert pattern, Tradeoff, Data governance policy)
+- Create collection of complementary datasets we need into mongodb Database
+- Produce and consume messages through a Pub/Sub server in Kafka of 3 different sources
+- Use PySpark to do pre-processing data inside these 3 different streams
+- Detect violations through custom functions, atatched to Spark through UDF
+- Do a full online join of 3 streams by confugring join through conditionals and Watermarking.
+- Save said result from Spark into a MongoDB collection
+- Create another stream through mongoDB trigger of saved result to be later process into a dynamic plot
