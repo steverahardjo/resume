@@ -17,7 +17,7 @@
   paper:"a4",
   author-position: center,
   personal-info-position: center,
-  font-size: 11pt,
+  font-size: 10pt,
 )
 
 == Education
@@ -28,13 +28,7 @@
   degree: "bachelor of Computer Science specialization Data Science",
   dates: dates-helper(start-date:"Feb 2021", end-date:"Nov 2025"))
 
-  - Relevant Coursework: Data Structure and Algorithm, Data Management and Modelling, Computation Theory, Data Analytics, Object-Oriented Programming, Big Data Processing, Discrete Mathematics, Calculus
-#edu(
-institution: "SMA Kolese Loyola",
-dates: "2020",
-degree: "High School Diploma in Natural Science",
-location: "Semarang, Jawa Tengah"
-)
+  - Relevant Coursework: Data Structure and Algorithm, Data Management and Modelling, Computation Theory, Data Analytics, Data Visualization, Object-Oriented Programming, App Development in Android, Big Data Processing, Discrete Math, Continuous Math, Microeconomics
 
 == Work Experience
 #work(
@@ -83,11 +77,8 @@ location: "Semarang, Jawa Tengah"
 - Implement an autocomplete UI from Bubbletea to autocomplete file-related CLI command such as cd, ls with folder name
 
 === Big Data File Processing of IoT Data #sub[PySpark, Kafka, Zookeeper, MongoDB, Matplotlib]
-- Plan and compile data warehousing design for our project (variables, collection relationship, Upsert pattern, Tradeoff, Data governance policy)
-- Create collection of complementary datasets we need into mongodb Database
-- Produce and consume messages through a Pub/Sub server in Kafka of 3 different sources
-- Use PySpark to do pre-processing data inside these 3 different streams
-- Detect violations through custom functions, atatched to Spark through UDF
-- Do a full online join of 3 streams by confugring join through conditionals and Watermarking.
-- Save said result from Spark into a MongoDB collection
-- Create another stream through mongoDB trigger of saved result to be later process into a dynamic plot
+- Designed and implemented a data warehouse schema in MongoDB for IoT data, defining collection relationships and an upsert strategy.
+- Built a Kafka Pub/Sub system, coordinated by Zookeeper, to ingest and process real-time streams from three distinct IoT sources.
+- Used PySpark for real-time preprocessing, transformation, and custom anomaly detection via User-Defined Functions (UDFs).
+- Performed online stream-to-stream joins across the three sources using watermarks to handle time-bound data correlation.
+- Persisted processed and joined data back into MongoDB and used change streams to trigger dynamic visualizations with Matplotlib.
