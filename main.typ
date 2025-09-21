@@ -26,10 +26,16 @@
   institution: "Monash University Malaysia",
   location: "Subang Jaya, Selangor",
   degree: "bachelor of Computer Science specialization Data Science",
-  dates: dates-helper(start-date:"Feb 2021", end-date:"Nov 2025"))
+  dates: dates-helper(start-date:"Feb 2023 ", end-date:"Nov 2025"))
 
   - Relevant Coursework: Data Structure and Algorithm, Data Management and Modelling, Computation Theory, Data Analytics, Data Visualization, Object-Oriented Programming, App Development in Android, Big Data Processing, Discrete Math, Continuous Math, Microeconomics
 
+#edu(
+  institution: "Monash College",
+  location:"Subang jaya, Selangor",
+  degree: "Diploma of Higher Education Studient in Information Technology",
+  dates: dates-helper(start-date: "feb 2021", end-date:"Nov 2022")
+)
 == Work Experience
 #work(
   title: "Data Analyst Trainee in CDP Team",
@@ -37,11 +43,11 @@
   company: "SynergyXYZ",
   dates: dates-helper(start-date: "Nov 2024", end-date: "Feb 2025")
 )
-- Research Customer Data Platforms vendors, document and evaluate their offerings
-- Formulate CDP offerings for prospective client and compile a proposal deck on it
-- Compile technical documents surround a CDP tool
+- Research Customer Data Platforms vendors, document and evaluate their offerings.
+- Formulate CDP offerings for prospective client and compile a proposal deck on it.
+- Compile technical documents surround a CDP tool.
 - Plan overall directions of CDP team with supervisors.
-- Gained experience in uzing Google Ads
+- Gained experience in using Google Ads.
 
 #work(
   title : "Website Admin",
@@ -49,32 +55,28 @@
   dates: dates-helper(end-date:"June 2025", start-date:"July 2024"),
   location: "Subang Jaya, Selangor",
 )
-- Plan and executing total revamp of PPI Eunoia Wordpress website
-- Publishing writtten and video content on the PPI Eunoia Website
-- Assisting in PPI Monash Event program, beyond web administration
+- Plan and executing total revamp of PPI Eunoia Wordpress website.
+- Publishing writtten and video content on the PPI Eunoia Website.
+- Assisting in PPI Monash Event program, beyond web administration.
 
-== Heading: Projects
+== Projects
 
 === Patent Analyzer  #sub[Python, Django, OpenAI, TogetherAI, QdrantDB, Selenium]
 
-- Research and Developing a decoder-based patent analyzer on TRIZ principles as a part of a Final Year Project
-- Develop and maintain proprietary text extraction module from PDF using Selenium and BS4
-- Develop and implement a novel CoT and prompt injection to do multi-label classification using a decoder model
-- Implement fact-grounded QA system using hybrid search RAG through QdrantDB
-- Implement a Django RESTful API and containerize in docker to ensure ease of deployment
-- Iterate and improve on backend bugs
+- Research and Developing a decoder-based patent analyzer on TRIZ principles as a part of a Final Year Project.
+- Develop and maintain proprietary text extraction module from PDF using Selenium and BS4.
+- Develop and implement a novel CoT and prompt injection to do multi-label classification using a decoder model.
+- Implement fact-grounded QA system using hybrid search RAG through QdrantDB.
+- Implement a Django RESTful API and containerize in docker to ensure ease of deployment.
+- Iterate and improve on backend bugs.
 
 === Expense Tracker #sub[Python, LLM, Agent, MCP, AWS, Telegram API, Matplotlib]
 
-- Plan and design a expense tracker and retriever powered by LLM model
-- Implement from scratch LLM agentic modules such as Agentic paradigms, Model proxy, Tooling, MCP servers, and usage loggings
-- Implement a upsert and retriever system through a natural language input into a Database through agentic tooling
-- Implement a retrieved output displayed through a tabular or graph form using matplotlib
-- Host backend app in AWS and connect it to a Telegram chatbot interfacr
-
-=== File Manipulation CLI tool #sub[Go, Bubbletea]
-- Plan development roadmap and tools I need
-- Implement an autocomplete UI from Bubbletea to autocomplete file-related CLI command such as cd, ls with folder name
+- Plan and design a expense tracker and retriever powered by LLM model.
+- Implement from scratch LLM agentic modules such as Agentic paradigms, Model proxy, Tooling, MCP servers, and usage loggings.
+- Implement a upsert and retriever system through a natural language input into a Database through agentic tooling.
+- Implement a retrieved output displayed through a tabular or graph form using matplotlib.
+- Host backend app in AWS and connect it to a Telegram chatbot interface.
 
 === Big Data File Processing of IoT Data #sub[PySpark, Kafka, Zookeeper, MongoDB, Matplotlib]
 - Designed and implemented a data warehouse schema in MongoDB for IoT data, defining collection relationships and an upsert strategy.
