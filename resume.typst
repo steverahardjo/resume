@@ -33,7 +33,7 @@
 #edu(
   institution: "Monash College",
   location:"Subang jaya, Selangor",
-  degree: "Diploma of Higher Education Studient in Information Technology",
+  degree: "Diploma of Higher Education Study in Information Technology",
   dates: dates-helper(start-date: "feb 2021", end-date:"Nov 2022")
 )
 == Work Experience
@@ -49,6 +49,7 @@
 - Plan overall directions of CDP team with supervisors.
 - Gained experience in using Google Ads.
 
+== Volunteer Experience
 #work(
   title : "Website Admin",
   company: "PPI Monash Malaysia",
