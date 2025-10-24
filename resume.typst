@@ -85,3 +85,13 @@
 - Used PySpark for real-time preprocessing, transformation, and custom anomaly detection via User-Defined Functions (UDFs).
 - Performed online stream-to-stream joins across the three sources using watermarks to handle time-bound data correlation.
 - Persisted processed and joined data back into MongoDB and used change streams to trigger dynamic visualizations with Matplotlib.
+
+=== GitAegis, cli tool to detect sensitive data in codebase #sub[Golang, Cobra, TreeSitter, Git]
+- Implement interface to run app in Cli using Cobra.
+- Enable efficient entrophy calculation.
+- Enable two types of parsing, per line scan and scanning using existing treesitter.
+- Enable read and write from existing gitignore to avoid files and execution.
+- Enable detected sensitive logging in a .json format.
+- Add finegrained regex pattern to detect certain key you want.
+- Implement a .toml config file to control input, filters, and output.
+- Implement optimization through parallelism in goroutine, Struct of Arrays, and few refactoring tricks in golang
