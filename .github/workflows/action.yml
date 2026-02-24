@@ -1,30 +1,36 @@
 name: Build resume document
-on:
-  push: {branches: [main]}
 
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   build_typst_documents:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
-        use: actions/checkout@v3
-      - name: resume-run
+        uses: actions/checkout@v4
+
+      - name: Build resumes
         uses: lvignoli/typst-action@main
         with:
-          source_file:|
-          resume.typst
-          resume_ai.typst
-          resume_backend.typst
-      - name: artifact upload
+          source_file: |
+            resume.typst
+            resume_ai.typst
+            resume_backend.typst
+
+      - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: PDF
-          path: *.pdf
+          path: "*.pdf"
+
       - name: Install rclone
-        run: |
-          curl https://rclone.org/install.sh | sudo bash
-      - name: Create rclone config
+        run: curl https://rclone.org/install.sh | sudo bash
+
+      - name: Configure rclone
         run: |
           mkdir -p ~/.config/rclone
           echo "${{ secrets.GDRIVE_SERVICE_ACCOUNT_JSON }}" > sa.json
@@ -33,7 +39,8 @@ jobs:
           type = drive
           scope = drive
           service_account_file = sa.json
-          EOF      - name: Create
-      - name: Upload files
+          EOF
+
+      - name: Upload PDFs to Drive
         run: |
-          rclone copy . gdrive: 1s5nmE7KUVCG8ooX-1slN9YfOGapuBft5
+          rclone copy *.pdf gdrive: --drive-root-folder-id 1s5nmE7KUVCG8ooX-1slN9YfOGapuBft5

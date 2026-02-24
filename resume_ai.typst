@@ -1,6 +1,6 @@
 #import "@preview/basic-resume:0.2.8": *
 #let name = "Steve Jevon Rahardjo"
-#let location = "Subang Jaya, Selangor"
+#let location = "Semarang, Central Java, Indonesia"
 #let email = "steve.jevon.r@gmail.com"
 #let github = "github.com/steverahardjo"
 #let linkedin = "linkedin.com/in/steve-jevon-rahardjo-7a53332b7"
@@ -66,22 +66,18 @@
 - Developed and adapted a manual classification method into chain-of-thoughts and modified vector search method.
 - Delivered a deployable patent analysis platform capable of structured, principle-based insights from raw patent documents.
 
-=== Expense Tracker #sub[Python, LLM, Agent, MCP, AWS, Telegram API, Matplotlib]
-- Implement a multi-agent, multimodal system in google ADK with utils such as structured output, artifact saving, and artifact loading.
-- Implement multiple tool functions such as mongodb database tools, visualization tools, and google blob storage saving functions. 
-- Implement a YOLO-based receipt image cropper to pre-process image before
-- Connect everything to a Telegram-bot interface with feature such as typing notifier, markdowV2 parser, and multimodal input.
+=== Autonomous Expense Agent #sub[Python, Gemini 3, Agentic MCP, AWS, YOLO, MongoDB]
+- Architected a **multi-agent multimodal system** using Google ADK, implementing structured output parsing and stateful artifact management for long-running financial workflows.
+- Integrated **Model Context Protocol (MCP)** to unify tool functions across MongoDB transactions, Matplotlib data visualization, and Google Cloud Storage (Blob).
+- Developed a **YOLO-based computer vision pipeline** to crop and pre-process receipt images, optimizing OCR accuracy and reducing downstream LLM token consumption.
+- Deployed a Telegram-bot interface supporting MarkdownV2, real-time typing indicators, and multimodal data ingestion.
+- *Upcoming*: Orchestrating a fine-tuning pipeline for **Gemma 3 (GemmaFunction)** to transition the agent to a privacy-centric, self-hosted open-source model.
 
 === Big Data File Processing of IoT Data #sub[PySpark, Kafka, Zookeeper, MongoDB, Matplotlib]
 - Designed and implemented a data warehouse schema in MongoDB for IoT data, defining collection relationships and an upsert strategy.
 - Built a Kafka Pub/Sub system to ingest and process real-time streams from three distinct IoT sources.
 - Used PySpark for real-time preprocessing, transformation, and custom anomaly detection via User-Defined Functions (UDFs).
 - Persisted processed and joined data back into MongoDB and used change streams to trigger dynamic visualizations with Matplotlib.
-
-=== GitAegis — CLI Secret Scanner #sub[Golang, Cobra, Tree-sitter, Git]
-- Built a CLI tool to detect secrets and API keys using entropy analysis to solve problem I faced during development.
-- Main features it has are entrophy calculation, Tree-sitter, configurable parameters through CLI and `.toml` file.
-- Enable reliable secret detection before commits, producing JSON output and update .gitignore.
 
 == Technical Skill
 *Languages*: Python, Java, Golang, SQL, R, TypeScript, HTML, json.\
