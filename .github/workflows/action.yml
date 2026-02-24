@@ -30,6 +30,7 @@ jobs:
       - name: Install rclone
         run: curl https://rclone.org/install.sh | sudo bash
 
+
       - name: Configure rclone
         run: |
           mkdir -p ~/.config/rclone
