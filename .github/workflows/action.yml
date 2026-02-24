@@ -43,4 +43,4 @@ jobs:
 
       - name: Upload PDFs to Drive
         run: |
-          rclone copy *.pdf gdrive: --drive-root-folder-id 1s5nmE7KUVCG8ooX-1slN9YfOGapuBft5
+          rclone copy . gdrive: --include "*.pdf" --drive-root-folder-id 1s5nmE7KUVCG8ooX-1slN9YfOGapuBft5
