@@ -34,7 +34,7 @@ jobs:
       - name: Configure rclone
         run: |
           mkdir -p ~/.config/rclone
-          echo "${{ secrets.GDRIVE_SERVICE_ACCOUNT_JSON }}" > sa.json
+          echo "${{ secrets.GDRIVE_SERVICE_ACCOUNT_JSON }}"| base64 -d > sa.json
           cat <<EOF > ~/.config/rclone/rclone.conf
           [gdrive]
           type = drive
