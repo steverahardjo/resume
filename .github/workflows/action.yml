@@ -34,14 +34,16 @@ jobs:
       - name: Configure rclone
         run: |
           mkdir -p ~/.config/rclone
-          echo "${{ secrets.GDRIVE_SERVICE_ACCOUNT_JSON }}"| base64 -d > sa.json
+          echo "${{ secrets.GDRIVE_SERVICE_ACCOUNT_JSON }}" | base64 -d > sa.json
+
           cat <<EOF > ~/.config/rclone/rclone.conf
           [gdrive]
           type = drive
           scope = drive
           service_account_file = sa.json
+          root_folder_id = 1s5nmE7KUVCG8ooX-1slN9YfOGapuBft5
           EOF
 
       - name: Upload PDFs to Drive
         run: |
-          rclone copy . gdrive: --include "*.pdf" --drive-root-folder-id 1s5nmE7KUVCG8ooX-1slN9YfOGapuBft5
+          rclone copy . gdrive: --include "*.pdf"
