@@ -82,6 +82,7 @@ if __name__ == "__main__":
         drive_service = get_service()
         clear_folder(drive_service)
         upload_pdfs(drive_service)
+        print(f"Debug: CLIENT_ID length is {len(CONFIG['CLIENT_ID'] if CONFIG['CLIENT_ID'] else '')}")
         print("Process completed successfully.")
     except Exception as e:
         print(f"Critical Failure: {e}")
