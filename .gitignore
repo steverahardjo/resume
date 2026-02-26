@@ -1,3 +1,4 @@
 sa.json
 /.venv
 .env
+credentials.json

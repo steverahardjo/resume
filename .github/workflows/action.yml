@@ -44,8 +44,5 @@ jobs:
       # 4. Run the Upload Script
       - name: Upload PDFs to Google Drive
         env:
-          FOLDER_ID: ${{ secrets.FOLDER_ID }}
-          REFRESH_TOKEN: ${{ secrets.REFRESH_TOKEN }}
-          CLIENT_ID: ${{ secrets.CLIENT_ID }}
-          CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
+          GDRIVE_CREDENTIALS: ${{ secrets.GDRIVE_CREDENTIALS }}
         run: python main.py
