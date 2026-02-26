@@ -1,19 +1,21 @@
-name: Build resume document
+name: Build and Upload Resumes
 
 on:
   push:
     branches:
       - main
+  workflow_dispatch: # Allows you to run this manually for testing
 
 jobs:
-  build_typst_documents:
+  build_and_upload:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Build resumes
+      # 1. Build the Typst Documents
+      - name: Build Resumes (Typst)
         uses: lvignoli/typst-action@main
         with:
           source_file: |
@@ -21,29 +23,29 @@ jobs:
             resume_ai.typst
             resume_backend.typst
 
-      - name: Upload artifact
+      # 2. Store as GitHub Artifacts (Good for backup)
+      - name: Upload Artifact to GitHub
         uses: actions/upload-artifact@v4
         with:
-          name: PDF
+          name: PDF-Resumes
           path: "*.pdf"
 
-      - name: Install rclone
-        run: curl https://rclone.org/install.sh | sudo bash
+      # 3. Setup Python Environment
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
 
-
-      - name: Configure rclone
+      - name: Install Python Dependencies
         run: |
-          mkdir -p ~/.config/rclone
-          echo "${{ secrets.GDRIVE_SERVICE_ACCOUNT_JSON }}" | base64 -d > sa.json
+              python -m pip install --upgrade pip
+              pip install -r requirements.txt
 
-          cat <<EOF > ~/.config/rclone/rclone.conf
-          [gdrive]
-          type = drive
-          scope = drive
-          service_account_file = sa.json
-          root_folder_id = 1s5nmE7KUVCG8ooX-1slN9YfOGapuBft5
-          EOF
-
-      - name: Upload PDFs to Drive
-        run: |
-          rclone copy . gdrive: --include "*.pdf"
+      # 4. Run the Upload Script
+      - name: Upload PDFs to Google Drive
+        env:
+          FOLDER_ID: ${{ secrets.FOLDER_ID }}
+          REFRESH_TOKEN: ${{ secrets.REFRESH_TOKEN }}
+          CLIENT_ID: ${{ secrets.CLIENT_ID }}
+          CLIENT_SECRET : ${{ secrets.CLIENT_SECRET }}
+        run: main.py

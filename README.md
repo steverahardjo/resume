@@ -1,2 +1,2 @@
 # resume
-personal_resume, updated 2025
+personal_resume, updated 2026
