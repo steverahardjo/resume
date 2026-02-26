@@ -47,5 +47,5 @@ jobs:
           FOLDER_ID: ${{ secrets.FOLDER_ID }}
           REFRESH_TOKEN: ${{ secrets.REFRESH_TOKEN }}
           CLIENT_ID: ${{ secrets.CLIENT_ID }}
-          CLIENT_SECRET : ${{ secrets.CLIENT_SECRET }}
+          CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
         run: python main.py
