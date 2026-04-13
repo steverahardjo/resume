@@ -4,26 +4,28 @@ from google.oauth2.credentials import Credentials
 from google.auth.transport.requests import Request
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaFileUpload
-from dotenv import load_dotenv
 
-load_dotenv()
+# 1. Configuration Constants
+CREDENTIALS_FILE = 'credentials.json'
+TARGET_FOLDER_ID = None  # Will be populated from JSON
 
 def get_drive_service():
-    """Initializes the Drive service from a single JSON environment variable."""
-    creds_raw = os.environ.get("GDRIVE_CREDENTIALS")
+    """Initializes the Drive service from a local JSON file."""
+    global TARGET_FOLDER_ID
     
-    if not creds_raw:
-        raise ValueError("Error: GDRIVE_CREDENTIALS environment variable is missing.")
+    if not os.path.exists(CREDENTIALS_FILE):
+        raise FileNotFoundError(f"Error: {CREDENTIALS_FILE} not found in the current directory.")
 
     try:
-        # Parse the JSON and strip any accidental whitespace
-        config = json.loads(creds_raw.strip())
+        with open(CREDENTIALS_FILE, 'r') as f:
+            config = json.load(f)
         
-        # Store folder_id globally for the upload functions
-        global TARGET_FOLDER_ID
+        # Extract Folder ID
         TARGET_FOLDER_ID = config.get("folder_id")
+        if not TARGET_FOLDER_ID:
+            raise ValueError(f"Error: 'folder_id' key missing from {CREDENTIALS_FILE}")
 
-        # OAuth2 Mapping
+        # Map OAuth2 info
         info = {
             "client_id": config.get("client_id"),
             "client_secret": config.get("client_secret"),
@@ -33,48 +35,26 @@ def get_drive_service():
         
         creds = Credentials.from_authorized_user_info(info, ['https://www.googleapis.com/auth/drive.file'])
 
+        # Refresh if necessary
         if creds and creds.expired and creds.refresh_token:
             print("Status: Refreshing access token...")
             creds.refresh(Request())
             
+        # Return the actual service object
         return build("drive", "v3", credentials=creds)
+
     except json.JSONDecodeError:
-        raise ValueError("Error: GDRIVE_CREDENTIALS is not valid JSON. Check for trailing commas.")
+        raise ValueError(f"Error: {CREDENTIALS_FILE} contains invalid JSON formatting.")
 
-def sync_files(service):
-    """Trashes remote files and uploads current local PDFs."""
-    print(f"Action: Syncing to folder {TARGET_FOLDER_ID}")
-    
-    # 1. Cleanup
-    try:
-        query = f"'{TARGET_FOLDER_ID}' in parents and trashed = false"
-        results = service.files().list(q=query, fields="files(id, name)").execute()
-        for item in results.get('files', []):
-            print(f"Removing: {item['name']}")
-            service.files().delete(fileId=item['id']).execute()
-    except Exception as e:
-        print(f"Error: Directory cleanup failed: {e}")
-
-    # 2. Upload
-    pdfs = [f for f in os.listdir('.') if f.endswith('.pdf')]
-    if not pdfs:
-        print("Warning: No PDF files found in workspace.")
-        return
-
-    for filename in pdfs:
-        print(f"Uploading: {filename}")
-        metadata = {'name': filename, 'parents': [TARGET_FOLDER_ID]}
-        media = MediaFileUpload(filename, mimetype='application/pdf')
-        try:
-            file = service.files().create(body=metadata, media_body=media, fields='id').execute()
-            print(f"Success: Created file ID {file.get('id')}")
-        except Exception as e:
-            print(f"Error: Upload failed for {filename}: {e}")
-
+# --- Execution Block ---
 if __name__ == "__main__":
     try:
-        drive_service = get_drive_service()
-        sync_files(drive_service)
-        print("Process completed successfully.")
+        # Assign the returned service to a variable
+        service = get_drive_service()
+        print("Success: Connected to Google Drive.")
+        
+        # Now you can call your sync function:
+        # sync_files(service) 
+        
     except Exception as e:
         print(f"Critical Failure: {e}")

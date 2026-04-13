@@ -1,11 +1,11 @@
-
-#import "@preview/basic-resume:0.2.8": *
+#import "@preview/basic-resume:0.2.9": *
 #let name = "Steve Jevon Rahardjo"
 #let location = "Semarang, Central Java"
 #let email = "steve.jevon.r@gmail.com"
 #let github = "github.com/steverahardjo"
+#let website = "sjrah.net"
 #let linkedin = "linkedin.com/in/steve-jevon-rahardjo"
-#let phone = "+6285190651240" 
+#let phone = "+6285190651240"
 #show: resume.with(
   author: name,
   location: location,
@@ -24,7 +24,7 @@
 #edu(
   institution: "Monash University Malaysia",
   location: "Subang Jaya, Selangor",
-  degree: "bachelor of Computer Science specialization Data Science",
+  degree: "Bachelor of Computer Science in Data Science",
   dates: dates-helper(start-date:"Feb 2023 ", end-date:"Nov 2025"))
 
   - Relevant Coursework: Data Structure and Algorithm, Data Management and Warehousing, Data Modelling, Computation Theory, Data Analytics, Data Visualization, Object-Oriented Programming, App Development in Android, Big Data Processing, Discrete Math, Continuous Math, Microeconomics
@@ -60,26 +60,29 @@
 - Assisting in PPI Monash Event program, beyond web administration.
 
 == Projects
-
-=== Patent Analyzer  #sub[Python, Django, OpenAI, TogetherAI, QdrantDB, Selenium]
-- As a Final Year Project, my team and I implemented a patent document analyzer on TRIZ principles using a decoder LLM model.
-- I implemented most backend components such as; automated text extraction using bs4, Chain of thought prompting, and hybrid RAG search through qdrantDB.
-- Developed and adapted a manual classification method into chain-of-thoughts and modified vector search method.
-- Delivered a deployable patent analysis platform capable of structured, principle-based insights from raw patent documents.
-
-=== Big Data File Processing of IoT Data #sub[PySpark, Kafka, Zookeeper, MongoDB, Matplotlib]
-- Designed and implemented a data warehouse schema in MongoDB for IoT data, defining collection relationships and an upsert strategy.
-- Built a Kafka Pub/Sub system to ingest and process real-time streams from three distinct IoT sources.
-- Used PySpark for real-time preprocessing, transformation, and custom anomaly detection via User-Defined Functions (UDFs).
-- Persisted processed and joined data back into MongoDB and used change streams to trigger dynamic visualizations with Matplotlib.
+=== Deneb - Finance App #sub[Python, Golang, TanStack Router, Typescript, PostgreSQL, Google ADK, YOLO, React, Better-Auth]
+- Built a full-stack expense tracking platform using React (Shadcn UI) and TanStack Router, delivering a modular and responsive frontend architecture.
+- Designed and implemented email OTP authentication (client/server) using Better-Auth for secure user access.
+- Developed a Golang backend with RESTful APIs to handle financial data processing and persistence in PostgreSQL.
+- Structured and maintained scalable API architecture, adapting endpoints as features and data models evolved.
+- Integrated a multi-agent, multimodal AI system (Google ADK) communicating with backend services via API.
+- Built a YOLO-based receipt preprocessing pipeline for image cropping and cleaning prior to storage and inference.
+- Versioned, deployed, and monitored ML models using MLflow, ensuring reproducibility and tracking performance.
 
 === GitAegis — CLI Secret Scanner #sub[Golang, Cobra, Tree-sitter, Git]
-- Built a CLI tool to detect secrets and API keys using entropy analysis to solve problem I faced during development.
-- Main features it has are entrophy calculation, Tree-sitter, configurable parameters through CLI and `.toml` file.
-- Enable reliable secret detection before commits, producing JSON output and update .gitignore.
+- Implement CLI tool to detect secrets and API keys through entrophy calculation method.
+- Integrate `tree-sitter` for optimized and accurate code structure and entrophy calculation.
+- Built configurable scanning via CLI flags and .toml configuration.
+- Generated structured JSON outputs and automated .gitignore updates to prevent secret leaks.
+
+=== Big Data File Processing of IoT Data #sub[PySpark, Kafka, Zookeeper, MongoDB, Matplotlib]
+- Designed and implemented a real-time streaming pipeline using Kafka (3 producers) for IoT data ingestion.
+- Built PySpark processing layer for transformation, enrichment, and anomaly detection using custom UDFs.
+- Modeled and implemented a MongoDB data warehouse schema with optimized upsert strategies.
+- Enabled event-driven visualization using MongoDB change streams and Matplotlib.
+- Delivered a scalable pipeline for continuous ingestion, processing, and analysis of streaming data.
 
 == Technical Skill
-*Languages*: Python, Java, Golang, SQL, R, TypeScript, HTML, json.\
-*Developer Tools*: Wordpress(CMS), Git, Docker, Kafka, Spark, Huggingface, Github Action, MongoDB, QdrantDB.\
-*Libraries/Framework*:Matplotlib, Pandas, Flask, Google ADK, BeautifulSoup4, ScikitLearn, XGBoost.
-
+*Languages*: Golang, Python, Java, SQL, TypeScript\
+*Backend & Systems*: REST APIs, PostgreSQL, MongoDB, Kafka, Spark\
+*Tools*: Docker, Github Action, Docker Compose, Telemetry.
