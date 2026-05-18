@@ -1,11 +1,12 @@
 #import "@preview/basic-resume:0.2.9": *
 #let name = "Steve Jevon Rahardjo"
-#let location = "Subang Jaya, Selangor"
+#let location = "Semarang, Central Java"
 #let email = "steve.jevon.r@gmail.com"
-#let github = "github.com/steverahardjo"
 #let linkedin = "linkedin.com/in/steve-jevon-rahardjo"
 #let website = "sjrah.net"
 #let phone = "+6285190651240"
+#let github = "github.com/steverahardjo"
+
 #show: resume.with(
   author: name,
   location: location,
@@ -17,6 +18,8 @@
   author-position: center,
   personal-info-position: center,
   font-size: 11pt,
+  linkedin: linkedin,
+  personal-site: website
 )
 
 == Education

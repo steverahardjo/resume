@@ -12,6 +12,8 @@
   email: email,
   github: github,
   phone: phone,
+  linkedin: linkedin,
+  personal-site:website,
   font:"New Computer Modern",
   paper:"a4",
   author-position: center,

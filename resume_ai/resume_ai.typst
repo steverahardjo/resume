@@ -1,6 +1,6 @@
 #import "@preview/basic-resume:0.2.9": *
 #let name = "Steve Jevon Rahardjo"
-#let location = "Subang Jaya, Selangor"
+#let location = "Semarang, Central Java"
 #let email = "steve.jevon.r@gmail.com"
 #let github = "github.com/steverahardjo"
 #let linkedin = "linkedin.com/in/steve-jevon-rahardjo"
@@ -11,12 +11,15 @@
   location: location,
   email: email,
   github: github,
+  personal-site: website,
+  linkedin: linkedin,
   phone: phone,
   font:"New Computer Modern",
   paper:"a4",
   author-position: center,
   personal-info-position: center,
   font-size: 11pt,
+  
 )
 
 == Education
@@ -62,7 +65,7 @@
 
 === Patent Analyzer  #sub[Python, Django, OpenAI, TogetherAI, QdrantDB, Selenium]
 - Built an end-to-end patent analysis platform using TRIZ principles and LLM reasoning to extract structured insights from raw patent documents.
-- Designed and implemented a hybrid RAG pipeline (vector search + prompt engineering) using QdrantDB for semantic retrieval.
+- Designed and implemented a hybrid search using QdrantDB for user QA with data of 10k tokens to ensure accuracy between semantic and keyword.
 - Developed automated data ingestion pipeline (BeautifulSoup, Selenium) for large-scale patent text extraction.
 - Implemented Chain-of-Thought prompting strategies to improve classification accuracy and reasoning quality.
 
