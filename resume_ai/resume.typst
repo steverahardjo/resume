@@ -19,26 +19,14 @@
   author-position: center,
   personal-info-position: center,
   font-size: 11pt,
-  
 )
 
-== Education
+== Professional Summary
 
-#edu(
-  institution: "Monash University Malaysia",
-  location: "Subang Jaya, Selangor",
-  degree: "Bachelor of Computer Science in Data Science",
-  dates: dates-helper(start-date:"Feb 2023 ", end-date:"Nov 2025"))
-  - Relevant Coursework: Data Structure and Algorithm, Data Management and Warehousing, Data Modelling, Computation Theory, Data Analytics, Data Visualization, Object-Oriented Programming, App Development in Android, Big Data Processing, Discrete Math, Continuous Math, Microeconomics
-
-#edu(
-  institution: "Monash College",
-  location:"Subang jaya, Selangor",
-  degree: "Diploma of Higher Education Study in Information Technology",
-  dates: dates-helper(start-date: "feb 2021", end-date:"Nov 2022")
-)
+#text(size: 10.5pt)[Computer Science graduate specializing in AI/ML engineering, with hands-on experience building LLM-powered platforms, RAG pipelines, and multi-agent AI systems. Skilled in Python, Golang, and modern ML frameworks, with project experience spanning NLP, computer vision (YOLO), and large-scale data processing. Proficient in end-to-end ML system design from data ingestion and preprocessing to model deployment and monitoring.]
 
 == Work Experience
+
 #work(
   title: "Data Analyst Trainee in CDP Team",
   location: "Puchong Jaya, Selangor",
@@ -50,20 +38,9 @@
 - Assisting in client research and compiling proposal decks for 3 different cient.
 - Authored early-version of CDP platform SDK and workflow documentations for internal use.
 
-== Volunteer Experience
-#work(
-  title : "Website Admin",
-  company: "PPI Monash Malaysia",
-  dates: dates-helper(end-date:"Nov 2025", start-date:"July 2024"),
-  location: "Subang Jaya, Selangor",
-)
-- Implement daily maintainance and error debugging of the Wordpress website.
-- Plan and executing total revamp of PPI Eunoia Wordpress website.
-- Publishing multimedia contents according to org schedule and implement events registration form.
-
 == Projects
 
-=== Patent Analyzer  #sub[Python, Django, OpenAI, TogetherAI, QdrantDB, Selenium]
+=== Patent Analyzer #sub[Python, Django, OpenAI, TogetherAI, QdrantDB, Selenium]
 - Built an end-to-end patent analysis platform using TRIZ principles and LLM reasoning to extract structured insights from raw patent documents.
 - Designed and implemented a hybrid search using QdrantDB for user QA with data of 10k tokens to ensure accuracy between semantic and keyword.
 - Developed automated data ingestion pipeline (BeautifulSoup, Selenium) for large-scale patent text extraction.
@@ -85,7 +62,25 @@
 - Enabled event-driven visualization using MongoDB change streams and Matplotlib.
 - Delivered a scalable pipeline for continuous ingestion, processing, and analysis of streaming data.
 
-== Technical Skill
+== Technical Skills
+
 *Languages*: Python, Golang, SQL, R\
-*Developer Tools*: Git, Docker, Kafka, Spark, Huggingface, Github Action, QdrantDB.\
-*Libraries/Framework*: Pytorch, Polars, Google ADK, BeautifulSoup4, ScikitLearn.
+*AI/ML & Data*: PyTorch, Scikit-Learn, XGBoost, LangChain, Pandas, Polars, NLP, Computer Vision, RAG Pipelines\
+*MLOps & Infrastructure*: Docker, MLflow, Git, GitHub Actions, Kafka, Spark, QdrantDB\
+*Frameworks*: Google ADK, Django, FastAPI, BeautifulSoup4, Selenium
+
+== Education
+
+#edu(
+  institution: "Monash University Malaysia",
+  location: "Subang Jaya, Selangor",
+  degree: "Bachelor of Computer Science in Data Science",
+  dates: dates-helper(start-date:"Feb 2023 ", end-date:"Nov 2025"))
+  - Relevant Coursework: Data Structure and Algorithm, Data Management and Warehousing, Data Modelling, Computation Theory, Data Analytics, Data Visualization, Object-Oriented Programming, App Development in Android, Big Data Processing, Discrete Math, Continuous Math, Microeconomics
+
+#edu(
+  institution: "Monash College",
+  location:"Subang jaya, Selangor",
+  degree: "Diploma of Higher Education Study in Information Technology",
+  dates: dates-helper(start-date: "feb 2021", end-date:"Nov 2022")
+)

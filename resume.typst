@@ -22,6 +22,65 @@
   personal-site: website
 )
 
+== Professional Summary
+
+#text(size: 10.5pt)[Data-oriented Computer Science graduate with strong foundations in data engineering, ETL pipeline development, and big data processing. Experienced in building streaming and batch data pipelines using PySpark, Kafka, and MongoDB, and in designing data ingestion and transformation workflows. Proficient in SQL, Python, and scalable system architecture, with hands-on project experience in large-scale data processing and analysis. Seeking to apply data engineering skills to build and maintain robust data pipelines and support data-driven decision-making.]
+
+== Work Experience
+
+#work(
+  title: "Data Analyst Trainee in CDP Team",
+  location: "Puchong Jaya, Selangor",
+  company: "SynergyXYZ",
+  dates: dates-helper(start-date: "Nov 2024", end-date: "Feb 2025")
+)
+- Evaluated and maintained 20+ Customer Data Platform (CDP) vendors, analyzing data integration capabilities, features, and pricing for client recommendations.
+- Contributed to defining data pipeline requirements and solution positioning within the CDP team.
+- Assisted in client research and compiled proposal decks for 3 different clients, supporting data-driven solution design.
+- Authored early-version of CDP platform SDK and workflow documentation for internal engineering use.
+
+== Projects
+
+=== Big Data File Processing of IoT Data #sub[PySpark, Kafka, Zookeeper, MongoDB, Matplotlib]
+- Designed and implemented a real-time streaming data pipeline using Kafka (3 producers) for IoT data ingestion, demonstrating ETL workflow building.
+- Built PySpark processing layer for data transformation, enrichment, and anomaly detection using custom UDFs — directly applicable to big data tool operations.
+- Modeled and implemented a MongoDB data warehouse schema with optimized upsert strategies for efficient data storage and retrieval.
+- Enabled event-driven visualization using MongoDB change streams and Matplotlib for real-time data monitoring.
+- Delivered a scalable end-to-end pipeline for continuous ingestion, processing, and analysis of streaming data.
+
+=== Patent Analyzer #sub[Python, Django, OpenAI, TogetherAI, QdrantDB, Selenium]
+- Built an end-to-end data analysis platform using TRIZ principles and LLM reasoning to extract structured insights from raw patent documents.
+- Designed and implemented a hybrid RAG pipeline (vector search + prompt engineering) using QdrantDB for semantic retrieval — demonstrating data wrangling and metric building.
+- Developed automated data ingestion pipeline (BeautifulSoup, Selenium) for large-scale text extraction and preprocessing.
+- Implemented Chain-of-Thought prompting strategies to improve classification accuracy and reasoning quality.
+
+=== Deneb - Finance App #sub[Python, Golang, TanStack Router, Typescript, PostgreSQL, Google ADK, YOLO, React, Better-Auth]
+- Built a full-stack data-centric platform with a Python backend and PostgreSQL database for financial data processing and persistence.
+- Designed and implemented RESTful APIs to handle structured data processing, transformation, and storage.
+- Developed data preprocessing pipelines using YOLO-based receipt image cropping and cleaning prior to storage and inference.
+- Structured and maintained scalable API architecture, adapting endpoints as features and data models evolved.
+- Integrated a multi-agent, multimodal AI system (Google ADK) communicating with backend services via API.
+
+=== GitAegis — CLI Secret Scanner #sub[Golang, Cobra, Tree-sitter, Git]
+- Implemented a CLI tool to detect secrets and API keys through entropy calculation methods.
+- Integrated `tree-sitter` for optimized and accurate code structure analysis.
+- Built configurable scanning via CLI flags and .toml configuration.
+- Generated structured JSON outputs and automated .gitignore updates to prevent secret leaks.
+
+
+=== Skilltune -- Agentic Browser Extension to Adjust your Resume #sub[Opencode, python, langchain, nltk, langchain, javascript]
+- Implement frontend and onboarding flow to enable all necessary dependencies to run the agentic systems.
+- Implement a method to extract reliably job posting data through the browser dom and limit its ingestion.
+- Implement an agentic system powered using Langchain Framework: posting-summarizer, resume-writer, and job to resume profiler.
+
+== Technical Skills
+
+*Data Engineering & Pipelines*: PySpark, Apache Kafka, Apache Spark, ETL Workflows, Data Pipeline Design, Data Wrangling, Streaming Data Processing.\
+*Languages*: Python, SQL, Golang, Java, TypeScript, R, HTML.\
+*Databases & Storage*: PostgreSQL, MongoDB, QdrantDB, Data Warehousing.\
+*Developer Tools*: Docker, Git, GitHub Actions, Zookeeper, MLflow, Selenium, BeautifulSoup.\
+*Libraries & Frameworks*: Pandas, Matplotlib, Flask, Scikit-Learn, XGBoost, Google ADK, Tree-sitter.
+
 == Education
 
 #edu(
@@ -29,7 +88,7 @@
   location: "Subang Jaya, Selangor",
   degree: "Bachelor of Computer Science in Data Science",
   dates: dates-helper(start-date:"Feb 2023 ", end-date:"Nov 2025"))
-  - Relevant Coursework: Data Structure and Algorithm, Data Management and Warehousing, Data Modelling, Computation Theory, Data Analytics, Data Visualization, Object-Oriented Programming, App Development in Android, Big Data Processing, Discrete Math, Continuous Math, Microeconomics
+  - Relevant Coursework: Big Data Processing, Data Management and Warehousing, Data Analytics, Data Visualization, Data Structure and Algorithm, Data Modelling, Object-Oriented Programming, App Development in Android, Discrete Math, Continuous Math, Microeconomics
 
 #edu(
   institution: "Monash College",
@@ -37,61 +96,3 @@
   degree: "Diploma of Higher Education Study in Information Technology",
   dates: dates-helper(start-date: "feb 2021", end-date:"Nov 2022")
 )
-
-== Work Experience
-#work(
-  title: "Data Analyst Trainee in CDP Team",
-  location: "Puchong Jaya, Selangor",
-  company: "SynergyXYZ",
-  dates: dates-helper(start-date: "Nov 2024", end-date: "Feb 2025")
-)
-- Evaluated and maintained 20+ Customer Data Platform (CDP) vendors, analyzing features, pricing, and integration capabilities.
-- Contributed to defining service offerings and solution positioning within the CDP team.
-- Assisting in client research and compiling proposal decks for 3 different cient.
-- Authored early-version of CDP platform SDK and workflow documentations for internal use.
-
-== Volunteer Experience
-#work(
-  title : "Website Admin",
-  company: "PPI Monash Malaysia",
-  dates: dates-helper(end-date:"Nov 2025", start-date:"July 2024"),
-  location: "Subang Jaya, Selangor",
-)
-- Implement daily maintainance and error debugging of the Wordpress website.
-- Plan and executing total revamp of PPI Eunoia Wordpress website.
-- Publishing multimedia contents according to org schedule and implement events registration form.
-
-== Projects
-
-=== Patent Analyzer  #sub[Python, Django, OpenAI, TogetherAI, QdrantDB, Selenium]
-- Built an end-to-end patent analysis platform using TRIZ principles and LLM reasoning to extract structured insights from raw patent documents.
-- Designed and implemented a hybrid RAG pipeline (vector search + prompt engineering) using QdrantDB for semantic retrieval.
-- Developed automated data ingestion pipeline (BeautifulSoup, Selenium) for large-scale patent text extraction.
-- Implemented Chain-of-Thought prompting strategies to improve classification accuracy and reasoning quality.
-
-=== Deneb - Finance App #sub[Python, Golang, TanStack Router, Typescript, PostgreSQL, Google ADK, YOLO, React, Better-Auth]
-- Built a full-stack expense tracking platform using React (Shadcn UI) and TanStack Router, delivering a modular and responsive frontend architecture.
-- Designed and implemented email OTP authentication (client/server) using Better-Auth for secure user access.
-- Developed a Golang backend with RESTful APIs to handle financial data processing and persistence in PostgreSQL.
-- Structured and maintained scalable API architecture, adapting endpoints as features and data models evolved.
-- Integrated a multi-agent, multimodal AI system (Google ADK) communicating with backend services via API.
-- Built a YOLO-based receipt preprocessing pipeline for image cropping and cleaning prior to storage and inference.
-- Versioned, deployed, and monitored ML models using MLflow, ensuring reproducibility and tracking performance.
-
-=== Big Data File Processing of IoT Data #sub[PySpark, Kafka, Zookeeper, MongoDB, Matplotlib]
-- Designed and implemented a real-time streaming pipeline using Kafka (3 producers) for IoT data ingestion.
-- Built PySpark processing layer for transformation, enrichment, and anomaly detection using custom UDFs.
-- Modeled and implemented a MongoDB data warehouse schema with optimized upsert strategies.
-- Enabled event-driven visualization using MongoDB change streams and Matplotlib.
-- Delivered a scalable pipeline for continuous ingestion, processing, and analysis of streaming data.
-
-=== GitAegis — CLI Secret Scanner #sub[Golang, Cobra, Tree-sitter, Git]
-- Implement CLI tool to detect secrets and API keys through entrophy calculation method.
-- Integrate `tree-sitter` for optimized and accurate code structure and entrophy calculation.
-- Built configurable scanning via CLI flags and .toml configuration.
-- Generated structured JSON outputs and automated .gitignore updates to prevent secret leaks.
-
-== Technical Skill
-*Languages*: Python, Java, Golang, SQL, R, TypeScript, HTML.\
-*Developer Tools*: Wordpress(CMS), Git, Docker, Kafka, Spark, Huggingface, Github Action, MongoDB, QdrantDB.\
-*Libraries/Framework*:Matplotlib, Pandas, Flask, Google ADK, BeautifulSoup4, ScikitLearn, XGBoost.
