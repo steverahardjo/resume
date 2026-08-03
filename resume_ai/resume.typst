@@ -21,10 +21,6 @@
   font-size: 11pt,
 )
 
-== Professional Summary
-
-#text(size: 10.5pt)[Computer Science graduate specializing in AI/ML engineering, with hands-on experience building LLM-powered platforms, RAG pipelines, and multi-agent AI systems. Skilled in Python, Golang, and modern ML frameworks, with project experience spanning NLP, computer vision (YOLO), and large-scale data processing. Proficient in end-to-end ML system design from data ingestion and preprocessing to model deployment and monitoring.]
-
 == Work Experience
 
 #work(
@@ -38,6 +34,18 @@
 - Assisting in client research and compiling proposal decks for 3 different cient.
 - Authored early-version of CDP platform SDK and workflow documentations for internal use.
 
+
+== Volunteer Experience
+#work(
+  title : "Website Admin",
+  company: "PPI Monash Malaysia",
+  dates: dates-helper(end-date:"Nov 2025", start-date:"July 2024"),
+  location: "Subang Jaya, Selangor",
+)
+- Plan and executing total revamp of PPI Eunoia Wordpress website.
+- Publishing writtten and video content on the PPI Eunoia Website.
+- Assisting in PPI Monash Event program, beyond web administration.
+
 == Projects
 
 === Patent Analyzer #sub[Python, Django, OpenAI, TogetherAI, QdrantDB, Selenium]
@@ -46,21 +54,20 @@
 - Developed automated data ingestion pipeline (BeautifulSoup, Selenium) for large-scale patent text extraction.
 - Implemented Chain-of-Thought prompting strategies to improve classification accuracy and reasoning quality.
 
-=== Deneb - Finance App #sub[Python, Golang, TanStack Router, Typescript, PostgreSQL, Google ADK, YOLO, React, Better-Auth]
-- Built a full-stack expense tracking platform using React (Shadcn UI) and TanStack Router, delivering a modular and responsive frontend architecture.
-- Designed and implemented email OTP authentication (client/server) using Better-Auth for secure user access.
-- Developed a Golang backend with RESTful APIs to handle financial data processing and persistence in PostgreSQL.
-- Structured and maintained scalable API architecture, adapting endpoints as features and data models evolved.
-- Integrated a multi-agent, multimodal AI system (Google ADK) communicating with backend services via API.
-- Built a YOLO-based receipt preprocessing pipeline for image cropping and cleaning prior to storage and inference.
-- Versioned, deployed, and monitored ML models using MLflow, ensuring reproducibility and tracking performance.
+=== Deneb - Finance App #sub[Python, Golang, TanStack Router, TypeScript, PostgreSQL, Google ADK, YOLO, React, Better-Auth]
 
-=== Big Data File Processing of IoT Data #sub[PySpark, Kafka, Zookeeper, MongoDB, Matplotlib]
-- Designed and implemented a real-time streaming pipeline using Kafka (3 producers) for IoT data ingestion.
-- Built PySpark processing layer for transformation, enrichment, and anomaly detection using custom UDFs.
-- Modeled and implemented a MongoDB data warehouse schema with optimized upsert strategies.
-- Enabled event-driven visualization using MongoDB change streams and Matplotlib.
-- Delivered a scalable pipeline for continuous ingestion, processing, and analysis of streaming data.
+- Built a full-stack expense tracking platform using React (Shadcn UI), TanStack Router, Golang, and PostgreSQL.
+- Implemented secure email OTP authentication using Better-Auth.
+- Developed RESTful APIs and scalable backend architecture for financial data management.
+- Integrated a multimodal multi-agent AI system using Google ADK.
+- Built a YOLO-based receipt preprocessing pipeline and tracked ML models with MLflow.
+
+=== SkillTune - Resume Adjuster #sub[Python, LangChain, SQLite, JavaScript]
+
+- Built a Chrome extension to summarize job descriptions, evaluate resume compatibility, and generate tailored resume improvements.
+- Developed LangChain prompt pipelines and customized Typst prompts for DeepAgent-based resume generation.
+- Implemented SQLite-based caching using website URLs as cache keys.
+
 
 == Technical Skills
 

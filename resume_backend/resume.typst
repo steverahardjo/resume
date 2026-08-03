@@ -62,6 +62,13 @@
 - Assisting in PPI Monash Event program, beyond web administration.
 
 == Projects
+=== QR Invite — Event QR Invitation System #sub[Golang, PostgreSQL, pgx, sqlc, JWT, Docker]
+- Built a backend system for managing event invitations via QR codes with participant management and attendance tracking.
+- Designed PostgreSQL schema with sqlc code generation for type-safe, compile-time-checked database queries.
+- Implemented JWT (HS256) authentication with bcrypt password hashing for admin endpoints.
+- Integrated QR code generation (skip2/go-qrcode) and multi-channel invite delivery via WhatsApp (Meta Graph API) and email (Resend).
+- Used Uber Zap for structured logging and pgx for high-performance PostgreSQL connectivity.
+
 === Deneb - Finance App #sub[Python, Golang, TanStack Router, Typescript, PostgreSQL, Google ADK, YOLO, React, Better-Auth]
 - Built a full-stack expense tracking platform using React (Shadcn UI) and TanStack Router, delivering a modular and responsive frontend architecture.
 - Designed and implemented email OTP authentication (client/server) using Better-Auth for secure user access.

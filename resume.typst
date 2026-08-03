@@ -39,6 +39,18 @@
 - Assisted in client research and compiled proposal decks for 3 different clients, supporting data-driven solution design.
 - Authored early-version of CDP platform SDK and workflow documentation for internal engineering use.
 
+== Volunteer Experience
+#work(
+  title : "Website Admin",
+  company: "PPI Monash Malaysia",
+  dates: dates-helper(end-date:"Nov 2025", start-date:"July 2024"),
+  location: "Subang Jaya, Selangor",
+)
+- Plan and executing total revamp of PPI Eunoia Wordpress website.
+- Publishing writtten and video content on the PPI Eunoia Website.
+- Assisting in PPI Monash Event program, beyond web administration.
+
+
 == Projects
 
 === Big Data File Processing of IoT Data #sub[PySpark, Kafka, Zookeeper, MongoDB, Matplotlib]
@@ -48,18 +60,19 @@
 - Enabled event-driven visualization using MongoDB change streams and Matplotlib for real-time data monitoring.
 - Delivered a scalable end-to-end pipeline for continuous ingestion, processing, and analysis of streaming data.
 
+
 === Patent Analyzer #sub[Python, Django, OpenAI, TogetherAI, QdrantDB, Selenium]
 - Built an end-to-end data analysis platform using TRIZ principles and LLM reasoning to extract structured insights from raw patent documents.
 - Designed and implemented a hybrid RAG pipeline (vector search + prompt engineering) using QdrantDB for semantic retrieval — demonstrating data wrangling and metric building.
 - Developed automated data ingestion pipeline (BeautifulSoup, Selenium) for large-scale text extraction and preprocessing.
 - Implemented Chain-of-Thought prompting strategies to improve classification accuracy and reasoning quality.
 
-=== Deneb - Finance App #sub[Python, Golang, TanStack Router, Typescript, PostgreSQL, Google ADK, YOLO, React, Better-Auth]
-- Built a full-stack data-centric platform with a Python backend and PostgreSQL database for financial data processing and persistence.
-- Designed and implemented RESTful APIs to handle structured data processing, transformation, and storage.
-- Developed data preprocessing pipelines using YOLO-based receipt image cropping and cleaning prior to storage and inference.
-- Structured and maintained scalable API architecture, adapting endpoints as features and data models evolved.
-- Integrated a multi-agent, multimodal AI system (Google ADK) communicating with backend services via API.
+=== QR Invite — Event QR Invitation System #sub[Golang, PostgreSQL, pgx, sqlc, JWT, Docker]
+- Built a backend system for managing event invitations via QR codes with participant management and attendance tracking.
+- Designed PostgreSQL schema with sqlc code generation for type-safe, compile-time-checked database queries.
+- Implemented JWT (HS256) authentication with bcrypt password hashing for admin endpoints.
+- Integrated QR code generation (skip2/go-qrcode) and multi-channel invite delivery via WhatsApp (Meta Graph API) and email (Resend).
+- Used Uber Zap for structured logging and pgx for high-performance PostgreSQL connectivity.
 
 === GitAegis — CLI Secret Scanner #sub[Golang, Cobra, Tree-sitter, Git]
 - Implemented a CLI tool to detect secrets and API keys through entropy calculation methods.
@@ -67,11 +80,6 @@
 - Built configurable scanning via CLI flags and .toml configuration.
 - Generated structured JSON outputs and automated .gitignore updates to prevent secret leaks.
 
-
-=== Skilltune -- Agentic Browser Extension to Adjust your Resume #sub[Opencode, python, langchain, nltk, langchain, javascript]
-- Implement frontend and onboarding flow to enable all necessary dependencies to run the agentic systems.
-- Implement a method to extract reliably job posting data through the browser dom and limit its ingestion.
-- Implement an agentic system powered using Langchain Framework: posting-summarizer, resume-writer, and job to resume profiler.
 
 == Technical Skills
 
