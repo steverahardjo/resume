@@ -60,6 +60,12 @@
 - Enabled event-driven visualization using MongoDB change streams and Matplotlib for real-time data monitoring.
 - Delivered a scalable end-to-end pipeline for continuous ingestion, processing, and analysis of streaming data.
 
+=== FIT3003 — Data Warehouse & Business Intelligence Project #sub[SQL, Data Warehousing, Star Schema, Data Modeling, Data Analysis]
+- Designed a star-schema data warehouse with multiple FACT tables for reviews, bookings, and listings.
+- Performed SQL-based data cleaning to handle null values, duplicates, and untidy records before warehouse loading.
+- Built SQL aggregations to analyze booking patterns, host behavior, channel performance, and property ratings.
+- Created visualizations and descriptive statistics to communicate seasonal demand, booking intervals, and top properties.
+
 
 === Patent Analyzer #sub[Python, Django, OpenAI, TogetherAI, QdrantDB, Selenium]
 - Built an end-to-end data analysis platform using TRIZ principles and LLM reasoning to extract structured insights from raw patent documents.
